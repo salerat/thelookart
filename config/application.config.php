@@ -71,6 +71,7 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'ZfcUserDoctrineMongoODM',
+        'Lenta'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(

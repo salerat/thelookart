@@ -18,6 +18,24 @@ class LentaController extends AbstractActionController
 
     protected $lentaModel;
 
+    public function indexAction() {
+
+    }
+
+    public function addAction() {
+
+        $builder = new AnnotationBuilder();
+        $form = $builder->createForm('Lenta\Entity\Item');
+        return new ViewModel(array(
+           'form' => $form,
+        ));
+    }
+
+    public function addLentaAction() {
+        $post= $this->getRequest()->getPost();
+        $lentaModel = $this->getLentaModel();
+        $lentaModel->createNewLenta($post,$this->zfcUserAuthentication()->getIdentity()->getId());
+    }
 
     public function getLentaModel()
     {

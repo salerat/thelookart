@@ -9,7 +9,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'ticket' => array(
+            'lenta' => array(
                 'type' => 'segment',
                 'options' => array(
                     'route' => '/lenta[/:action][/:id]',

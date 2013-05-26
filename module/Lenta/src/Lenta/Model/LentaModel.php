@@ -9,6 +9,7 @@
 namespace Lenta\Model;
 
 use Lenta\Entity\Lenta;
+use Lenta\Entity\Item;
 
 use Doctrine\ODM\MongoDB\DocumentNotFoundException;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
@@ -25,6 +26,33 @@ class LentaModel implements ServiceLocatorAwareInterface
 {
 
     protected $serviceLocator;
+
+    public function createNewLenta($post,$userId) {
+        $propArray=get_object_vars($post);
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+
+        $lenta = new Lenta();
+        $userId=new \MongoId($userId);
+        $lenta->ownerId=$userId;
+        $objectManager->persist($lenta);
+        $objectManager->flush();
+        $lentaId=$lenta->id;
+
+        $item = new Item();
+
+        $propArray['lentaId']=new \MongoId($lentaId);
+
+
+
+        foreach ($propArray as $key => $value) {
+            $item->$key = $value;
+        }
+
+        $objectManager->persist($item);
+        $objectManager->flush();
+
+        die(var_dump($item));
+    }
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
