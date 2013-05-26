@@ -68,6 +68,10 @@ return array(
         'Album',
         'DoctrineModule',
         'DoctrineMongoODMModule',
+        'ZfcBase',
+        'ZfcUser',
+        'ZfcUserDoctrineMongoODM',
+        'Lenta'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(

@@ -1,0 +1,22 @@
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('lenta', array('action' => 'addLenta')))
+    ->prepare();
+echo $this->form()->openTag($form);
+
+
+$text = $form->get('text');
+
+
+echo $this->formRow($text);
+
+?>
+
+
+
+
+<?php
+
+echo $this->formElement($form->get('submit'));
+echo $this->form()->closeTag();
+?>

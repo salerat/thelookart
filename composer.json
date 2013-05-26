@@ -6,11 +6,26 @@
         "framework",
         "zf2"
     ],
-    "homepage": "http://framework.zend.com/",
-    "minimum-stability": "alpha",
+    "type": "project",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": ">2.1.3",
-        "doctrine/doctrine-mongo-odm-module": "dev-master"
-    }
+        "doctrine/doctrine-mongo-odm-module": "dev-master",
+        "zf-commons/zfc-user-doctrine-mongo-odm": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master",
+        "gedmo/doctrine-extensions": "dev-master"
+    },
+    "homepage": "http://framework.zend.com/",
+    "minimum-stability": "dev",
+    "require-dev": {
+        "codeception/codeception": "@stable",
+        "ccampbell/chromephp": "*"
+    },
+
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/bladeofsteel/ZfcUserDoctrineMongoODM.git"
+        }
+    ]
 }
