@@ -46,11 +46,10 @@ class FriendController extends AbstractActionController
     public function followingAction() {
         $friendModel = $this->getFriendModel();
         $users=$friendModel->getFollowing($this->zfcUserAuthentication()->getIdentity()->getId());
-        die(var_dump($users));
         return new ViewModel(array(
             'users' => $users
+
         ));
-        die(var_dump($users));
     }
 
     public function deleteFriendAction() {

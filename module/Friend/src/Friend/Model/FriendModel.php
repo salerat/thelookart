@@ -67,7 +67,10 @@ class FriendModel implements ServiceLocatorAwareInterface
         $users = $objectManager->getRepository('Friend\Entity\Friend')->findBy(array('friendId' => new \MongoId($userId)));
         $result=array();
         foreach($users as $us) {
-            array_push($result, get_object_vars($us));
+            $data=$objectManager->getRepository('User\Entity\User')->find(new \MongoId($us->userId));
+
+            $us=array('id'=>$data->getId(), 'id'=>$data->getId(), 'username'=> $data->getUsername(), 'displayName'=>$data->getDisplayName(),'email'=>$data->getEmail());
+            array_push($result,$us);
         }
         return $result;
     }
@@ -77,7 +80,10 @@ class FriendModel implements ServiceLocatorAwareInterface
         $users = $objectManager->getRepository('Friend\Entity\Friend')->findBy(array('userId' => new \MongoId($userId)));
         $result=array();
         foreach($users as $us) {
-            array_push($result, get_object_vars($us));
+
+            $data=$objectManager->getRepository('User\Entity\User')->find(new \MongoId($us->friendId));
+            $us=array('id'=>$data->getId(), 'id'=>$data->getId(), 'username'=> $data->getUsername(), 'displayName'=>$data->getDisplayName(),'email'=>$data->getEmail());
+            array_push($result,$us);
         }
         return $result;
     }
