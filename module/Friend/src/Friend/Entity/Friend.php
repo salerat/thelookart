@@ -18,8 +18,8 @@ use Doctrine\ODM\MongoDB\Id\UuidGenerator;
 use Doctrine\ODM\MongoDB\Mapping\Types\Type;
 
 /**
- * @ODM\Document(collection="item")
- * @Annotation\Name("item")
+ * @ODM\Document(collection="friend")
+ * @Annotation\Name("friend")
  * @Annotation\Hydrator("Zend\Stdlib\Hydrator\ObjectProperty")
  */
 class Friend

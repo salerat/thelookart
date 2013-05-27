@@ -31,16 +31,42 @@ class FriendController extends AbstractActionController
     }
 
     public function addAction() {
-
-
-    }
-
-    public function addLentaAction() {
-
         $friendModel = $this->getFriendModel();
 
     }
 
+    public function followersAction() {
+        $friendModel = $this->getFriendModel();
+        $users= $friendModel->getFollowers($this->zfcUserAuthentication()->getIdentity()->getId());
+        return new ViewModel(array(
+            'users' => $users
+        ));
+    }
+
+    public function followingAction() {
+        $friendModel = $this->getFriendModel();
+        $users=$friendModel->getFollowing($this->zfcUserAuthentication()->getIdentity()->getId());
+        die(var_dump($users));
+        return new ViewModel(array(
+            'users' => $users
+        ));
+        die(var_dump($users));
+    }
+
+    public function deleteFriendAction() {
+        $friendModel = $this->getFriendModel();
+        $id = $this->getEvent()->getRouteMatch()->getParam('id');
+        $friendModel->deleteFriend($id,$this->zfcUserAuthentication()->getIdentity()->getId());
+        return $this->redirect()->toUrl('/friends/list');
+    }
+
+    public function addFriendAction() {
+        $friendModel = $this->getFriendModel();
+        $id = $this->getEvent()->getRouteMatch()->getParam('id');
+        $friendModel->addFriend($id,$this->zfcUserAuthentication()->getIdentity()->getId());
+        return $this->redirect()->toUrl('/friends/list');
+
+    }
     public function getFriendModel()
     {
         if (!$this->friendModel) {

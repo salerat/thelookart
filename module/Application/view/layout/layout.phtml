@@ -20,7 +20,7 @@
 
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div style="height:70px;" class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -28,10 +28,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Skeleton Application') ?></a>
+                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('TheLookArt') ?></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url( 'friends', array('action' => 'followers'));?>"><?php echo $this->translate('Followers') ?></a></li>
+                            <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url( 'friends', array('action' => 'following'));?>"><?php echo $this->translate('Following') ?></a></li>
+
+
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -41,7 +45,7 @@
             <?php echo $this->content; ?>
             <hr>
             <footer>
-                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
+                <p>TheLookArt <?php echo $this->translate('All rights reserved.') ?></p>
             </footer>
         </div> <!-- /container -->
         <?php echo $this->inlineScript() ?>

@@ -12,10 +12,10 @@ $users=$this->users;
                 <td class="table_el" > <?php echo $this->gravatar($us['email']);?></td>
                 <td class="table_el" ><?php echo $us['email']; ?> </td>
                 <td class="table_el_d" ></td>
-                <td class="table_el_d" ><a class="add_friend" href="<?php echo $this->url(
+                <td class="table_el_d" ><a class="delete_friend" href="<?php echo $this->url(
                         'friends',
-                        array('action' => 'addFriend','id'=>$us['id'])
-                    );?>"></a></td>
+                        array('action' => 'deleteFriend','id'=>$us['id'])
+                    );?>"></td>
             </tr>
         <?php
         }

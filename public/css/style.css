@@ -31,7 +31,83 @@ body {
 }
 
 div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
     margin-left: 0;
     padding: 8px 20px 12px 40px;
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1em;
+    color: #ffffff;
+    font-weight:bold;
+    font-size: 42px;
+    text-shadow:0px 0px 0 rgb(216,216,216),1px 1px 0 rgb(187,187,187),2px 2px 0 rgb(158,158,158), 3px 3px 0 rgb(129,129,129),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
+}
+
+.container {
+
+}
+
+#containerc {
+    padding-top:20px;
+    width:700px;
+    margin:0 auto;
+    border-left:#000 dashed 1px;
+    border-right:#000 dashed 1px;
+}
+
+#containerc .elementc {
+    width:700px;
+    height:100px;
+}
+
+div.container a.Three-Dee{
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1em;
+    color: #ffffff;
+    font-weight:bold;
+    font-size: 42px;
+    text-shadow:0px 0px 0 rgb(216,216,216),1px 1px 0 rgb(187,187,187),2px 2px 0 rgb(158,158,158), 3px 3px 0 rgb(129,129,129),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);}
+
+.header_link_style {
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1em;
+    color: #ffffff;
+    font-weight:bold;
+    font-size: 17px;
+
+    text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(158,158,158), 2px 2px 0 rgb(115,115,115),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+}
+
+.user_email {
+    float:left;
+    font-weight: bold;
+}
+
+.user_avatar {
+    float:left;
+}
+
+.table_el {
+   text-align: center;
+    width:40%;
+    vertical-align: middle;
+ }
+
+.table_el_d {
+    text-align: center;
+    width:10%;
+    vertical-align: middle;
+}
+
+.add_friend {
+    display: block;
+    height:40px;
+    width:40px;
+background: url("../img/add_friend.png");
+}
+.delete_friend {
+    display: block;
+    height:40px;
+    width:40px;
+    background: url("../img/delete_friend.png");
 }
