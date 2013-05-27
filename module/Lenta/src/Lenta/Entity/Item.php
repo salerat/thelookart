@@ -48,6 +48,19 @@ class Item
      * @Annotation\Exclude()
      */
     public $lentaId;
+
+    /**
+
+     * @Annotation\Type("Zend\Form\Element\File")
+     */
+    public $image;
+
+    /**
+     * @ODM\ObjectId
+     * @var int
+     * @Annotation\Exclude()
+     */
+    public $imageLink;
     /**
      * @Gedmo\Timestampable(on="create")
      * @ODM\Date
@@ -84,6 +97,8 @@ class Item
      * @Annotation\Attributes({"value":"Отправить"})
      */
     public $submit;
+
+
 
     /**
      * @ODM\Date
