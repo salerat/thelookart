@@ -19,7 +19,8 @@ class LentaController extends AbstractActionController
     protected $lentaModel;
 
     public function indexAction() {
-
+        $lentaModel = $this->getLentaModel();
+        $lentaModel->addImage();
     }
 
     public function addAction() {

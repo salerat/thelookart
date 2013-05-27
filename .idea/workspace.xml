@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="211546fe-b66b-443b-a469-10d0214a9c1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Friend/view/friend/friend/followers.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Friend/view/friend/friend/followong.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Friend/view/friend/friend/list.phtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module/Friend/src/Lenta/Controller/FriendController.php" afterPath="$PROJECT_DIR$/module/Friend/src/Friend/Controller/FriendController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module/Friend/src/Lenta/Entity/Friend.php" afterPath="$PROJECT_DIR$/module/Friend/src/Friend/Entity/Friend.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/module/Friend/src/Lenta/Model/FriendModel.php" afterPath="$PROJECT_DIR$/module/Friend/src/Friend/Model/FriendModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.config.php" afterPath="$PROJECT_DIR$/config/application.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Image.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/TheLookArt.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php" afterPath="$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Lenta/src/Lenta/Model/LentaModel.php" afterPath="$PROJECT_DIR$/module/Lenta/src/Lenta/Model/LentaModel.php" />
     </list>
     <ignored path="TheLookArt.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/vendor/zendframework/zendframework/build.xml" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369407240759" ignored="false" />
-    <file path="/Dummy.txt" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369666993484" ignored="false" />
+    <file path="/Dummy.txt" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369667029314" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/zendframework/zendframework/library/Zend/Mvc/ModuleRouteListener.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369576443733" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369576443733" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceLocatorAwareInterface.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369576443733" ignored="false" />
@@ -26,13 +29,17 @@
     <file path="/Friend.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369580361369" ignored="false" />
     <file path="/Module.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369580093007" ignored="false" />
     <file path="/module.config.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369580105362" ignored="false" />
-    <file path="/a.dummy" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369580165259" ignored="false" />
+    <file path="/a.dummy" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369668743341" ignored="false" />
     <file path="/FriendController.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369581247164" ignored="false" />
     <file path="/FriendModel.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369585436999" ignored="false" />
     <file path="/list.phtml" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369581312549" ignored="false" />
     <file path="/application.config.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369582909927" ignored="false" />
     <file path="/User.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369583703088" ignored="false" />
     <file path="$PROJECT_DIR$/data/DoctrineMongoODMModule/Hydrator/ZfcUserDoctrineMongoODMDocumentUserHydrator.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369583160536" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369669049308" ignored="false" />
+    <file path="/Files.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369668551720" ignored="false" />
+    <file path="/LentaModel.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369668775899" ignored="false" />
+    <file path="/LentaController.php" changelist="211546fe-b66b-443b-a469-10d0214a9c1b" time="1369668803794" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +68,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FriendModel.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FriendModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Friend/src/Friend/Model/FriendModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="30" selection-start="1008" selection-end="1022" vertical-scroll-proportion="0.23341523">
+            <state line="40" column="9" selection-start="1338" selection-end="1338" vertical-scroll-proportion="-8.958333">
               <folding>
                 <element signature="e#187#212#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="11" selection-start="582" selection-end="587" vertical-scroll-proportion="-13.125">
+              <folding>
+                <element signature="e#6#162#0" expanded="true" />
+                <element signature="e#189#214#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LentaModel.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Model/LentaModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="24" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.44717446">
+              <folding>
+                <element signature="e#186#209#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lenta.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Lenta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="21" selection-start="650" selection-end="650" vertical-scroll-proportion="3.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LentaController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="32" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Item.php" />
-        <option value="$PROJECT_DIR$/module/User/src/User/Entity/Friend.php" />
-        <option value="$PROJECT_DIR$/module/Friend/view/lenta/lenta/add.phtml" />
         <option value="$PROJECT_DIR$/module/Friend/Module.php" />
         <option value="$PROJECT_DIR$/module/Friend/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Friend/src/Lenta/Controller/FriendController.php" />
@@ -106,6 +151,9 @@
         <option value="$PROJECT_DIR$/config/application.config.php" />
         <option value="$PROJECT_DIR$/module/User/src/User/Entity/User.php" />
         <option value="$PROJECT_DIR$/module/Friend/src/Friend/Model/FriendModel.php" />
+        <option value="$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Files.php" />
+        <option value="$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php" />
+        <option value="$PROJECT_DIR$/module/Lenta/src/Lenta/Model/LentaModel.php" />
       </list>
     </option>
   </component>
@@ -205,8 +253,22 @@
               <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="TheLookArt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TheLookArt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -224,7 +286,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,147 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -394,7 +316,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -402,7 +324,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -424,7 +346,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -432,33 +354,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
+              <option name="myItemId" value="Lenta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheLookArt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,18 +448,23 @@
       <created>1369580396847</created>
       <updated>1369580396847</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Сделал вывод всех пользователей">
+      <created>1369667036853</created>
+      <updated>1369667036853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24670571" sideWeight="0.7707641" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24670571" sideWeight="0.7707641" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22923589" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -569,7 +474,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -617,7 +521,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал заготовку моудля друзей." />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал вывод всех пользователей" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -636,6 +540,7 @@
     <MESSAGE value="Правильно настроил композер. Сделал модуль юзера." />
     <MESSAGE value="Добавил нужные файлы." />
     <MESSAGE value="Сделал заготовку моудля друзей." />
+    <MESSAGE value="Сделал вывод всех пользователей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -643,29 +548,11 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Friend/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="906" selection-end="906" vertical-scroll-proportion="-23.125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Friend/autoload_classmap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Friend/view/friend/friend/followers.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Friend/view/friend/friend/followong.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="572" selection-end="647" vertical-scroll-proportion="-12.5" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/User/Module.php">
@@ -675,7 +562,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Friend/src/Friend/Controller/FriendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="-8.125" />
+        <state line="28" column="29" selection-start="629" selection-end="629" vertical-scroll-proportion="-8.125">
+          <folding>
+            <element signature="e#38#95#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Friend/config/module.config.php">
@@ -695,12 +586,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Friend/src/Friend/Entity/Friend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="15" selection-start="2331" selection-end="2331" vertical-scroll-proportion="4.157248" />
+        <state line="123" column="15" selection-start="2331" selection-end="2331" vertical-scroll-proportion="4.157248">
+          <folding>
+            <element signature="e#6#161#0" expanded="false" />
+            <element signature="e#189#214#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="6" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.5896806" />
+        <state line="78" column="6" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.5896806">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Reflection.php">
@@ -722,9 +620,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Friend/src/Friend/Model/FriendModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="1008" selection-end="1022" vertical-scroll-proportion="0.23341523">
+        <state line="40" column="9" selection-start="1338" selection-end="1338" vertical-scroll-proportion="-8.958333">
           <folding>
             <element signature="e#187#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="11" selection-start="582" selection-end="587" vertical-scroll-proportion="-13.125">
+          <folding>
+            <element signature="e#6#162#0" expanded="true" />
+            <element signature="e#189#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Entity/Lenta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="21" selection-start="650" selection-end="650" vertical-scroll-proportion="3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Controller/LentaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="32" selection-start="504" selection-end="504" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lenta/src/Lenta/Model/LentaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="24" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.44717446">
+          <folding>
+            <element signature="e#186#209#0" expanded="true" />
           </folding>
         </state>
       </provider>

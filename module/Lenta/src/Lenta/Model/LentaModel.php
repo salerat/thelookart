@@ -10,6 +10,7 @@ namespace Lenta\Model;
 
 use Lenta\Entity\Lenta;
 use Lenta\Entity\Item;
+use Lenta\Entity\Image;
 
 use Doctrine\ODM\MongoDB\DocumentNotFoundException;
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
@@ -52,6 +53,24 @@ class LentaModel implements ServiceLocatorAwareInterface
         $objectManager->flush();
 
         die(var_dump($item));
+    }
+
+    public function addImage() {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $image = new Image();
+        $image->setName('Test image');
+        $image->setFile('/home/solov/Downloads/453.png');
+
+        $objectManager->persist($image);
+        $objectManager->flush();
+
+        $image = $objectManager->createQueryBuilder('Lenta\Entity\Image')
+            ->field('name')->equals('Test image')
+            ->getQuery()
+            ->getSingleResult();
+
+        header('Content-type: image/png;');
+        echo $image->getFile()->getBytes();
     }
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
