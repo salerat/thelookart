@@ -22,6 +22,14 @@ class FriendController extends AbstractActionController
 
     }
 
+    public function listAction() {
+        $friendModel = $this->getFriendModel();
+        $users=$friendModel->getAllUsers();
+        return new ViewModel(array(
+            'users' => $users
+        ));
+    }
+
     public function addAction() {
 
 
