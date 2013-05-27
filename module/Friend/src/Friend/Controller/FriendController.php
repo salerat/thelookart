@@ -35,12 +35,30 @@ class FriendController extends AbstractActionController
 
     }
 
-    public function addLentaAction() {
+    public function followersAction() {
 
-        $friendModel = $this->getFriendModel();
 
     }
 
+    public function followingAction() {
+
+
+    }
+
+    public function deleteFriendAction() {
+        $friendModel = $this->getFriendModel();
+        $id = $this->getEvent()->getRouteMatch()->getParam('id');
+        $friendModel->deleteFriend($id,$this->zfcUserAuthentication()->getIdentity()->getId());
+        return $this->redirect()->toUrl('/friends/list');
+    }
+
+    public function addFriendAction() {
+        $friendModel = $this->getFriendModel();
+        $id = $this->getEvent()->getRouteMatch()->getParam('id');
+        $friendModel->addFriend($id,$this->zfcUserAuthentication()->getIdentity()->getId());
+        return $this->redirect()->toUrl('/friends/list');
+
+    }
     public function getFriendModel()
     {
         if (!$this->friendModel) {

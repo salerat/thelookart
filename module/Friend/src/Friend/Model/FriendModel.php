@@ -31,17 +31,37 @@ class FriendModel implements ServiceLocatorAwareInterface
         $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
         //$this->getServiceLocator()->loadModule('ZfcUser');
         $users =$objectManager->getRepository('User\Entity\User')->createQueryBuilder()
-            ->getQuery()->execute();;
+            ->getQuery()->execute();
 
         $result=array();
         foreach($users as $us) {
-            $us=array('id'=>$us->getId(), 'username'=> $us->getUsername(), 'displayName'=>$us->getDisplayName(),'email'=>$us->getEmail());
+            $us=array('id'=>$us->getId(), 'id'=>$us->getId(), 'username'=> $us->getUsername(), 'displayName'=>$us->getDisplayName(),'email'=>$us->getEmail());
             array_push($result,$us);
 
         }
 
         return $result;
     }
+
+    public function addFriend($friendId,$userId) {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $friend=new Friend();
+        $friend->friendId=new \MongoId($friendId);
+        $friend->userId=new \MongoId($userId);
+
+        $objectManager->persist($friend);
+        $objectManager->flush();
+    }
+
+
+    public function deleteFriend($friendId,$userId) {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $users =$objectManager->getRepository('Friend\Entity\Friend')->createQueryBuilder()->remove()
+        ->field('friendId')->equals(new \MongoId($friendId))
+            ->field('userId')->equals(new \MongoId($userId))
+            ->getQuery()->execute();
+    }
+
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {

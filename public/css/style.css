@@ -46,6 +46,7 @@ div.container a.brand {
 }
 
 #containerc {
+    padding-top:20px;
     width:700px;
     margin:0 auto;
     border-left:#000 dashed 1px;
@@ -75,4 +76,38 @@ div.container a.Three-Dee{
     font-size: 17px;
 
     text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(158,158,158), 2px 2px 0 rgb(115,115,115),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+}
+
+.user_email {
+    float:left;
+    font-weight: bold;
+}
+
+.user_avatar {
+    float:left;
+}
+
+.table_el {
+   text-align: center;
+    width:40%;
+    vertical-align: middle;
+ }
+
+.table_el_d {
+    text-align: center;
+    width:10%;
+    vertical-align: middle;
+}
+
+.add_friend {
+    display: block;
+    height:40px;
+    width:40px;
+background: url("../img/add_friend.png");
+}
+.delete_friend {
+    display: block;
+    height:40px;
+    width:40px;
+    background: url("../img/delete_friend.png");
 }

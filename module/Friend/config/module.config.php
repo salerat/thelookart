@@ -9,7 +9,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'friend' => array(
+            'friends' => array(
                 'type' => 'segment',
                 'options' => array(
                     'route' => '/friends[/:action][/:id]',
