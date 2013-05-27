@@ -35,7 +35,7 @@ class FriendModel implements ServiceLocatorAwareInterface
 
         $result=array();
         foreach($users as $us) {
-            $us=array('id'=>$us->getId(), 'username'=> $us->getUsername(), 'displayName'=>$us->getDisplayName());
+            $us=array('id'=>$us->getId(), 'username'=> $us->getUsername(), 'displayName'=>$us->getDisplayName(),'email'=>$us->getEmail());
             array_push($result,$us);
 
         }

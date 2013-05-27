@@ -1,3 +1,21 @@
 <?php
 $users=$this->users;
-die(var_dump($users));
+
+
+?>
+<div id="containerc">
+ <?php
+    foreach($users as $us) {
+ ?>
+    <div class="elementc">
+        <?php
+    echo $us['email'];
+    echo $this->gravatar($us['email']);
+        ?>
+    </div>
+        <?php
+        }
+        ?>
+
+    </div>
+</div>
