@@ -1,0 +1,20 @@
+<?php
+
+$lentas = $this->lentas;
+
+?>
+
+<div id="containerc">
+    <table width="100%">
+        <?php
+        foreach($lentas as $lenta) {
+            ?>
+            <tr>
+                <td class="table_el" ><?php  echo $lenta['item']->text;?> </td>
+
+            </tr>
+        <?php
+        }
+        ?>
+    </table>
+</div>

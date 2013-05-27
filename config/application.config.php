@@ -73,7 +73,7 @@ return array(
         'ZfcUserDoctrineMongoODM',
         'Lenta',
         'Friend',
-        'User'
+
 
 
     ),
