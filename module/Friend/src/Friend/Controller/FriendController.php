@@ -31,18 +31,26 @@ class FriendController extends AbstractActionController
     }
 
     public function addAction() {
-
+        $friendModel = $this->getFriendModel();
 
     }
 
     public function followersAction() {
-
-
+        $friendModel = $this->getFriendModel();
+        $users= $friendModel->getFollowers($this->zfcUserAuthentication()->getIdentity()->getId());
+        return new ViewModel(array(
+            'users' => $users
+        ));
     }
 
     public function followingAction() {
-
-
+        $friendModel = $this->getFriendModel();
+        $users=$friendModel->getFollowing($this->zfcUserAuthentication()->getIdentity()->getId());
+        die(var_dump($users));
+        return new ViewModel(array(
+            'users' => $users
+        ));
+        die(var_dump($users));
     }
 
     public function deleteFriendAction() {

@@ -32,6 +32,10 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url( 'friends', array('action' => 'followers'));?>"><?php echo $this->translate('Followers') ?></a></li>
+                            <li class="active"><a style="padding: 24px;" class="header_link_style" href="<?php echo $this->url( 'friends', array('action' => 'following'));?>"><?php echo $this->translate('Following') ?></a></li>
+
+
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>

@@ -62,6 +62,25 @@ class FriendModel implements ServiceLocatorAwareInterface
             ->getQuery()->execute();
     }
 
+    public function getFollowers($userId) {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $users = $objectManager->getRepository('Friend\Entity\Friend')->findBy(array('friendId' => new \MongoId($userId)));
+        $result=array();
+        foreach($users as $us) {
+            array_push($result, get_object_vars($us));
+        }
+        return $result;
+    }
+
+    public function getFollowing($userId) {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $users = $objectManager->getRepository('Friend\Entity\Friend')->findBy(array('userId' => new \MongoId($userId)));
+        $result=array();
+        foreach($users as $us) {
+            array_push($result, get_object_vars($us));
+        }
+        return $result;
+    }
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
