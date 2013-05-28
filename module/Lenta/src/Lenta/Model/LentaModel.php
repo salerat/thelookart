@@ -20,7 +20,6 @@ use Doctrine\ODM\MongoDB\Configuration;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver;
 use Doctrine\ODM\MongoDB\Id\UuidGenerator;
-use User\Entity\User;
 use Doctrine\ODM\MongoDB\Mapping\Types\Type;
 
 class LentaModel implements ServiceLocatorAwareInterface
@@ -42,19 +41,27 @@ class LentaModel implements ServiceLocatorAwareInterface
         $itemsArray = $this->createItemsArray($post);
         foreach($itemsArray as $propArray){
             $item = new Item();
-            $this->addImage($propArray['image']);
+            $image = $this->addImage($propArray['image']);
+
+            $item->imageLink = new \MongoId($image);
+
             $propArray['lentaId']=new \MongoId($lentaId);
 
+
+            if ($favItem == 0){
+                $lenta -> favItem = new \MongoId($item->id);
+                $favItem = 1;
+
+            }
+    //        die(var_dump($item));
             foreach ($propArray as $key => $value) {
                 $item->$key = $value;
             }
+
             $objectManager->persist($item);
             $objectManager->flush();
-            if ($favItem == 0){
-                $lenta -> favItem = $item->id;
-                $favItem = 1;
-            }
         }
+
     }
 
     public function addImage($postImg) {
@@ -66,6 +73,10 @@ class LentaModel implements ServiceLocatorAwareInterface
 
         $objectManager->persist($image);
         $objectManager->flush();
+
+        return $image->getId();
+
+
     }
 
     public function getSingleLenta() {
@@ -80,7 +91,19 @@ class LentaModel implements ServiceLocatorAwareInterface
 
         $result=array();
         foreach($lentas as $len) {
-            $len=array('id'=>$len->id, 'favItem'=> $len->favItem );
+            $item = $objectManager->createQueryBuilder('Lenta\Entity\Item')
+                ->field('lentaId')->equals(new \MongoId($len->id))
+                ->getQuery()
+                ->getSingleResult();
+
+            $imageLink= $objectManager->createQueryBuilder('Lenta\Entity\Image')
+                ->field('id')->equals(new \MongoId($item->imageLink))
+                ->getQuery()
+                ->getSingleResult();
+            $imageBytes=$imageLink->getFile()->getBytes();
+           ;
+            $len=array('id'=>$len->id, 'item'=> $item, 'image'=>$imageBytes );
+
             array_push($result,$len);
         }
 

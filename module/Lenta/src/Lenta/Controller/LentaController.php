@@ -21,10 +21,11 @@ class LentaController extends AbstractActionController
     public function indexAction() {
         $lentaModel = $this->getLentaModel();
         $lentas = $lentaModel -> getAllLentas();
+
         return new ViewModel(array(
             'lentas' => $lentas
         ));
-  //      die(var_dump($lentas));
+
     }
 
     public function addAction() {

@@ -1,6 +1,7 @@
 <?php
 
 $lentas = $this->lentas;
+
 ?>
 
 <div id="containerc">
@@ -9,7 +10,7 @@ $lentas = $this->lentas;
         foreach($lentas as $lenta) {
             ?>
             <tr>
-                <td class="table_el" ><?php echo $lenta['id']; ?> </td>
+                <td class="table_el" ><?php  echo $lenta['item']->text;?> </td>
 
             </tr>
         <?php

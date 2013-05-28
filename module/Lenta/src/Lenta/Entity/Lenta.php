@@ -51,8 +51,8 @@ class Lenta
 
 
     /**
-     * @var string
-     * @ODM\Field(type="string")
+     * @ODM\ObjectId
+     * @var int
      * @Annotation\Exclude()
      */
     public $favItem;
