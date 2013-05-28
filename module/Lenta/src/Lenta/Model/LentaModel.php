@@ -29,7 +29,7 @@ class LentaModel implements ServiceLocatorAwareInterface
     protected $serviceLocator;
 
     public function createNewLenta($post,$userId) {
-        $propArray=get_object_vars($post);
+//        $propArray=get_object_vars($post);
         $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
 
         $lenta = new Lenta();
@@ -38,39 +38,49 @@ class LentaModel implements ServiceLocatorAwareInterface
         $objectManager->persist($lenta);
         $objectManager->flush();
         $lentaId=$lenta->id;
+$num = 0;
+        $itemsArray = $this->createItemsArray($post);
+        foreach($itemsArray as $propArray){
+ //           die(var_dump($itemsArray));
+            $item = new Item();
+//            die(var_dump($propArray['image']));
+            $this->addImage($propArray['image']);
+            $propArray['lentaId']=new \MongoId($lentaId);
 
-        $item = new Item();
-
-        $propArray['lentaId']=new \MongoId($lentaId);
-
-
-
-        foreach ($propArray as $key => $value) {
-            $item->$key = $value;
+            foreach ($propArray as $key => $value) {
+                $item->$key = $value;
+            }
+            $objectManager->persist($item);
+            $objectManager->flush();
+            $num++;
         }
-
-        $objectManager->persist($item);
-        $objectManager->flush();
-
-        die(var_dump($item));
+//        die(var_dump($num));
+ //       die(var_dump($item));
     }
 
-    public function addImage() {
+    public function addImage($postImg) {
+
         $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
         $image = new Image();
-        $image->setName('Test image');
-        $image->setFile('/home/solov/Downloads/453.png');
+        $image->setName($postImg['tmp_name']);
+        $image->setFile($postImg['tmp_name']);
 
         $objectManager->persist($image);
         $objectManager->flush();
+    }
 
-        $image = $objectManager->createQueryBuilder('Lenta\Entity\Image')
-            ->field('name')->equals('Test image')
-            ->getQuery()
-            ->getSingleResult();
-
-        header('Content-type: image/png;');
-        echo $image->getFile()->getBytes();
+    public function createItemsArray($post) {
+ //       die(var_dump($post));
+        $itemsArray = array();
+        for($i=0; $i<3; $i++){
+            $text_key = 'text_'.$i;
+            $image_key = 'image_'.$i;
+            $text =  $post[$text_key];
+            $image =  $post[$image_key];
+            $t_arr = array( 'text' => $text, 'image' => $image);
+            array_push($itemsArray, $t_arr);
+        }
+        return $itemsArray;
     }
 
     public function setServiceLocator(ServiceLocatorInterface $serviceLocator)

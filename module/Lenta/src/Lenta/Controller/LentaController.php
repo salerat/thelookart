@@ -20,7 +20,7 @@ class LentaController extends AbstractActionController
 
     public function indexAction() {
         $lentaModel = $this->getLentaModel();
-        $lentaModel->addImage();
+
     }
 
     public function addAction() {
@@ -33,9 +33,14 @@ class LentaController extends AbstractActionController
     }
 
     public function addLentaAction() {
-        $post= $this->getRequest()->getPost();
+        $request = $this->getRequest();
+        $post = array_merge_recursive(
+            $request->getPost()->toArray(),
+            $request->getFiles()->toArray()
+        );
         $lentaModel = $this->getLentaModel();
         $lentaModel->createNewLenta($post,$this->zfcUserAuthentication()->getIdentity()->getId());
+        return $this->redirect()->toRoute('lenta');
     }
 
     public function getLentaModel()

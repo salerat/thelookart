@@ -6,9 +6,15 @@ echo $this->form()->openTag($form);
 
 
 $text = $form->get('text');
+$image = $form->get('image');
 
-
-echo $this->formRow($text);
+$itemNumber = 3;
+for($n=0; $n<$itemNumber; $n++){
+    $text->setName('text_'.$n);
+    $image->setName('image_'.$n);
+    echo $this->formRow($text);
+    echo $this->formRow($image);
+}
 
 ?>
 

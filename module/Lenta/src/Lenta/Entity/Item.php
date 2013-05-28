@@ -85,6 +85,11 @@ class Item
      */
     public $submit;
 
+
+    /**
+     * @Annotation\Type("Zend\Form\Element\File")
+     */
+    public $image;
     /**
      * @ODM\Date
      * @Annotation\Exclude()
