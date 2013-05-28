@@ -48,6 +48,16 @@ class Lenta
      * @Annotation\Exclude()
      */
     public $ownerId;
+
+
+    /**
+     * @var string
+     * @ODM\Field(type="string")
+     * @Annotation\Exclude()
+     */
+    public $favItem;
+
+
     /**
      * @Gedmo\Timestampable(on="create")
      * @ODM\Date

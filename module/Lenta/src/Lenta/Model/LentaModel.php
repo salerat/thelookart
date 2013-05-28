@@ -38,12 +38,10 @@ class LentaModel implements ServiceLocatorAwareInterface
         $objectManager->persist($lenta);
         $objectManager->flush();
         $lentaId=$lenta->id;
-$num = 0;
+        $favItem = 0;
         $itemsArray = $this->createItemsArray($post);
         foreach($itemsArray as $propArray){
- //           die(var_dump($itemsArray));
             $item = new Item();
-//            die(var_dump($propArray['image']));
             $this->addImage($propArray['image']);
             $propArray['lentaId']=new \MongoId($lentaId);
 
@@ -52,10 +50,11 @@ $num = 0;
             }
             $objectManager->persist($item);
             $objectManager->flush();
-            $num++;
+            if ($favItem == 0){
+                $lenta -> favItem = $item->id;
+                $favItem = 1;
+            }
         }
-//        die(var_dump($num));
- //       die(var_dump($item));
     }
 
     public function addImage($postImg) {
@@ -67,6 +66,25 @@ $num = 0;
 
         $objectManager->persist($image);
         $objectManager->flush();
+    }
+
+    public function getSingleLenta() {
+
+    }
+
+    public function getAllLentas()  {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        //$this->getServiceLocator()->loadModule('ZfcUser');
+        $lentas =$objectManager->getRepository('Lenta\Entity\Lenta')->createQueryBuilder()
+            ->getQuery()->execute();
+
+        $result=array();
+        foreach($lentas as $len) {
+            $len=array('id'=>$len->id, 'favItem'=> $len->favItem );
+            array_push($result,$len);
+        }
+
+        return $result;
     }
 
     public function createItemsArray($post) {
