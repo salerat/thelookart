@@ -83,5 +83,7 @@ class LentaModel implements ServiceLocatorAwareInterface
         return $this->serviceLocator;
     }
 
+public function test() {
 
+}
 }
