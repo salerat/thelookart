@@ -56,4 +56,13 @@ class LentaController extends AbstractActionController
         }
         return $this->lentaModel;
     }
+    public function listAction() {
+        $id = $this->getEvent()->getRouteMatch()->getParam('id');
+        $lentaModel = $this->getLentaModel();
+        $list=$lentaModel->returnList($id);
+
+        return new ViewModel(array(
+            'list' => $list,
+        ));
+    }
 }

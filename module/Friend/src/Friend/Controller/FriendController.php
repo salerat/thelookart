@@ -74,4 +74,5 @@ class FriendController extends AbstractActionController
         }
         return $this->friendModel;
     }
+
 }

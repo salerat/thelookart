@@ -101,8 +101,9 @@ class LentaModel implements ServiceLocatorAwareInterface
                 ->getQuery()
                 ->getSingleResult();
             $imageBytes=$imageLink->getFile()->getBytes();
-           ;
-            $len=array('id'=>$len->id, 'item'=> $item, 'image'=>$imageBytes );
+            $user=$objectManager->getRepository('User\Entity\User')->findOneBy(array('id' => new \MongoId($len->ownerId)));
+
+            $len=array('id'=>$len->id, 'item'=> $item, 'image'=>$imageBytes ,'user'=>$user->getEmail());
 
             array_push($result,$len);
         }
@@ -134,7 +135,13 @@ class LentaModel implements ServiceLocatorAwareInterface
         return $this->serviceLocator;
     }
 
-public function test() {
-
-}
+    public function returnList($id) {
+        $objectManager = $this->getServiceLocator()->get('doctrine.documentmanager.odm_default');
+        $items = $objectManager->getRepository('Lenta\Entity\Item')->findBy(array('lentaId' => new \MongoId($id)));
+        $result=array();
+        foreach($items as $item) {
+            array_push($result,get_object_vars($item));
+        }
+        return $result;
+    }
 }

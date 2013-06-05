@@ -6,13 +6,33 @@ $lentas = $this->lentas;
 
 <div id="containerc">
     <table width="100%">
+    <th>
+        Твит
+    </th>
+            <th>
+                Владелец
+            </th>
+        <th>
+            Просмотреть полную версию
+        </th>
         <?php
         foreach($lentas as $lenta) {
             ?>
             <tr>
                 <td class="table_el" ><?php  echo $lenta['item']->text;?> </td>
 
-            </tr>
+
+
+                        <td align="center">
+                        <a href="<?php echo $this->url(
+                                    'lenta',
+                                    array('action' => 'list','id'=>$lenta['id'])
+                                );?>">Просмотреть</a>
+
+ </td>
+
+  <td class="table_el" ><?php  echo $lenta['user'];?> </td>
+                        </tr>
         <?php
         }
         ?>
