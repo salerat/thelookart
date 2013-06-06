@@ -1,0 +1,27 @@
+<?php
+
+$lentas = $this->list;
+
+?>
+
+<div id="containerc">
+    <table width="100%">
+        <th>
+            Твит
+        </th>
+
+        <?php
+        foreach($lentas as $lenta) {
+            ?>
+            <tr>
+                <td class="table_el" ><?php  echo $lenta['text'];?> </td>
+
+
+
+
+            </tr>
+        <?php
+        }
+        ?>
+    </table>
+</div>
